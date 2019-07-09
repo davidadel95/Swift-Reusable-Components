@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProgressDialogView" customModule="Repost" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelBtn" destination="By9-Br-5sN" id="KYS-fZ-vLt"/>
+                <outlet property="messageLbl" destination="MII-dQ-fSj" id="ZjT-YF-cVP"/>
+                <outlet property="nicoProgressBarr" destination="NYL-vm-891" id="5At-Sx-f9O"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="qkn-uZ-8rV">
+                    <rect key="frame" x="107" y="268" width="200" height="200"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYL-vm-891" customClass="NicoProgressBar" customModule="NicoProgress">
+                            <rect key="frame" x="14" y="50" width="172" height="20"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="4yA-1U-JZ6"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="1/1 Preparing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MII-dQ-fSj">
+                            <rect key="frame" x="50.666666666666664" y="99" width="98.666666666666686" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="By9-Br-5sN">
+                            <rect key="frame" x="76" y="148" width="48" height="30"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="-1" eventType="touchUpInside" id="rNl-Bm-wHW"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="By9-Br-5sN" firstAttribute="centerX" secondItem="qkn-uZ-8rV" secondAttribute="centerX" id="38j-EC-5ed"/>
+                        <constraint firstItem="MII-dQ-fSj" firstAttribute="top" secondItem="NYL-vm-891" secondAttribute="bottom" constant="29" id="Ad3-ak-Ule"/>
+                        <constraint firstItem="NYL-vm-891" firstAttribute="leading" secondItem="qkn-uZ-8rV" secondAttribute="leading" constant="14" id="B98-of-RIM"/>
+                        <constraint firstAttribute="trailing" secondItem="NYL-vm-891" secondAttribute="trailing" constant="14" id="ET4-mI-K8d"/>
+                        <constraint firstAttribute="bottom" secondItem="By9-Br-5sN" secondAttribute="bottom" constant="22" id="ErL-4k-y9h"/>
+                        <constraint firstItem="MII-dQ-fSj" firstAttribute="centerX" secondItem="qkn-uZ-8rV" secondAttribute="centerX" id="L1L-1u-9lE"/>
+                        <constraint firstItem="NYL-vm-891" firstAttribute="top" secondItem="qkn-uZ-8rV" secondAttribute="top" constant="50" id="L5e-eW-kdM"/>
+                        <constraint firstAttribute="height" constant="200" id="wg8-r2-QMy"/>
+                        <constraint firstAttribute="width" constant="200" id="xN9-Az-jiv"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="qkn-uZ-8rV" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="g1O-7Y-TfN"/>
+                <constraint firstItem="qkn-uZ-8rV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nUk-sf-Thh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.44565217391306"/>
+        </view>
+    </objects>
+</document>

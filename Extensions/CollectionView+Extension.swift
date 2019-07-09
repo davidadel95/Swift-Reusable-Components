@@ -1,9 +1,8 @@
 //
 //  CollectionView+Extension.swift
-//  Repost
 //
 //  Created by David Adel on 7/6/19.
-//  Copyright © 2019 MGPluses. All rights reserved.
+//  Copyright © 2019 DavidAdel. All rights reserved.
 //
 
 import Foundation
